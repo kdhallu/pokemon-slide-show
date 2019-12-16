@@ -1,13 +1,14 @@
 .description-container {
     border: 2px solid black;
     display: inline-block;
-    height: 300px;
+    height: 330px;
     width: calc(30%);
     margin: 10px;
 }
 
 .description-container .header {
     height: 30px;
+    padding: 5px;
     background-color: green;
     color: white;
 }

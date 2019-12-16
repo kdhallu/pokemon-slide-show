@@ -5,6 +5,7 @@
     background: green;
     color: white;
     display: inline;
+    cursor: pointer;
 }
 
 .navigation-container .position-left {
@@ -13,4 +14,8 @@
 
 .navigation-container .position-right {
     float: right;
+}
+
+.disabled input {
+    cursor: not-allowed !important;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import NavButton from './components/nav-button/nav-button';
 import DescriptionBox from './components/description-box/description-box';
 
-const BASE_API_URL = "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=3";
+const BASE_API_URL = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=3";
 
 
 class App extends React.Component {
@@ -21,16 +21,16 @@ class App extends React.Component {
 
 
 	onPrevButtonClicked() {
-		this.fetchPokemonList(this.state.previous);
+		!this.state.isLoading &&this.fetchPokemonList(this.state.prev);
 	}
 
 	onNextButtonClicked() {
-		this.fetchPokemonList(this.state.next);
+		!this.state.isLoading && this.fetchPokemonList(this.state.next);
 	}
 
 
 	render() {
-		const isLoading = this.state.isLoading;
+
 		return (
 			<div className="app">
 
@@ -42,11 +42,11 @@ class App extends React.Component {
 				/>)}
 
 				<NavButton
-					isLoading={this.state.isLoading}
+					nextButtonDisable={this.state.next === null}
+					prevButtonDisable={this.state.prev === null}
 					onNextButtonClicked={this.onNextButtonClicked}
 					onPrevButtonClicked={this.onPrevButtonClicked}
 				/>
-
 			</div>
 
 		);
