@@ -28,17 +28,14 @@ class App extends React.Component {
 		!this.state.isLoading && this.fetchPokemonList(this.state.next);
 	}
 
-
 	render() {
-
 		return (
 			<div className="app">
-
 				{this.state.pokemonDetails.map((pokemon, index) => <DescriptionBox
 					key={`pokemon-desc-${index}`}
-					name={pokemon.name}
+					title={pokemon.name}
 					id={pokemon.id}
-					frontImage={pokemon.sprites.front_default}
+					frontImage={pokemon.sprites && pokemon.sprites.front_default}
 				/>)}
 
 				<NavButton
@@ -48,7 +45,6 @@ class App extends React.Component {
 					onPrevButtonClicked={this.onPrevButtonClicked}
 				/>
 			</div>
-
 		);
 	}
 

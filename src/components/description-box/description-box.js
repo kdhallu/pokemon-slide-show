@@ -6,7 +6,7 @@ export default class DescriptionBox extends React.Component {
 		return (
 			<div className="description-container">
 				<div className="header">
-					<span className="title"> {this.props.name}</span>
+					<span className="title"> {this.props.title}</span>
 					<span className="id">id: {this.props.id}</span>
 				</div>
 				<div className="body">
