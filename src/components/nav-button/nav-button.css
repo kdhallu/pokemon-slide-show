@@ -1,0 +1,16 @@
+.navigation-container input {
+    width: 70px;
+    height: 40px;
+    border: none;
+    background: green;
+    color: white;
+    display: inline;
+}
+
+.navigation-container .position-left {
+    float: left;
+}
+
+.navigation-container .position-right {
+    float: right;
+}

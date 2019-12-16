@@ -1,0 +1,23 @@
+.description-container {
+    border: 2px solid black;
+    display: inline-block;
+    height: 300px;
+    width: calc(30%);
+    margin: 10px;
+}
+
+.description-container .header {
+    height: 30px;
+    background-color: green;
+    color: white;
+}
+
+.description-container .id {
+    float: right;
+}
+
+.description-container .body img {
+    display: block;
+    margin: auto;
+    height: 300px;
+}
